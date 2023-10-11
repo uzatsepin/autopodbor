@@ -1,0 +1,103 @@
+.check {
+  margin: 60px 0;
+
+  &__title {
+    font-size: 40px;
+    font-weight: $fontWeightBold;
+    line-height: 110%;
+    color: $white;
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    position: relative;
+    z-index: 99;
+    margin-top: 40px;
+    @media screen and (max-width: 1225px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 414px) {
+      display: block;
+    }
+  }
+
+  &__item {
+    max-width: 469px;
+    border-radius: 32px;
+    background: $white;
+    padding: 24px;
+    position: relative;
+    z-index: 99;
+    height: 243px;
+    transition: all 250ms ease-in-out;
+    @media screen and (max-width: 1329px) {
+      justify-self: center;
+      width: 95%;
+    }
+    @media screen and (max-width: 414px) {
+      margin-top: 16px;
+      border-radius: 16px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(105%);
+    }
+
+    &-title {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 140%;
+      color: $black;
+      max-width: 275px;
+    }
+
+    &-descr {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 140%;
+      color: $gray;
+      max-width: 190px;
+      margin-top: 14px;
+      @media screen and (max-width: 1329px) {
+        font-size: 16px;
+      }
+    }
+
+    &-img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      border-radius: 32px;
+      @media screen and (max-width: 600px) {
+        width: 60%;
+      }
+
+      &.engine {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 30px;
+        @media screen and (max-width: 600px) {
+          right: 0;
+          top: unset;
+          transform: unset;
+          bottom: 0;
+          width: 30%;
+        }
+        @media screen and (max-width: 1329px) {
+          right: 15px;
+        }
+        @media screen and (max-width: 1270px) {
+          right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  font-family: 'Play', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: $white;
+  background: $backgroundBlack;
+  box-sizing: border-box;
+}
+
+[class*="__container"] {
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 60%;
+  color: $white;
+  border-radius: 16px;
+  padding: 16px 24px;
+  font-size: 16px;
+
+  &-primary {
+    background: $mainBlue;
+    box-shadow: $defaultShadow;
+  }
+
+  &-secondary {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+.scroll {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

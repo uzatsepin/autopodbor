@@ -1,0 +1,140 @@
+.price {
+  margin-top: 60px;
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    transform: scale(103%);
+  }
+
+  &__wrapper {
+    border-radius: 32px;
+    background-color: $mainBlue;
+    padding: 34px 0;
+    position: relative;
+
+    &-img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 3;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: $fontWeightBold;
+    line-height: 110%;
+    color: $white;
+  }
+
+  &__elements {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 50px;
+    margin-top: 34px;
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      padding: 0 20px;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    border-radius: 16px;
+    background: $white;
+    box-shadow: $defaultShadow;
+    padding: 24px;
+    max-width: 370px;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    position: relative;
+
+    @media screen and (max-width: 1200px) {
+      position: relative;
+      z-index: 4;
+    }
+    @media screen and (max-width: 414px) {
+      padding: 16px;
+    }
+
+
+    &-title {
+      font-size: 24px;
+      font-weight: $fontWeightBold;
+      line-height: 110%;
+      color: $black;
+      text-align: center;
+    }
+
+    &-list {
+      margin: 24px 0;
+
+      &-element {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 110%;
+        color: $gray;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $lightGray;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin-top: 16px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          border-bottom: 1px solid transparent;
+        }
+
+        &::before {
+          content: "";
+          display: flex;
+          width: 40px;
+          height: 40px;
+          background-image: url('../img/checkmark.svg');
+          background-position: center center;
+          background-repeat: no-repeat;
+          align-items: center;
+
+        }
+
+        & p {
+          max-width: 246px;
+          @media screen and (max-width: 390px) {
+            max-width: 200px;
+          }
+        }
+      }
+    }
+
+    &-button {
+      border-radius: 16px;
+      background: $mainBlue;
+      padding: 15px 30px;
+      box-shadow: $defaultShadow;
+      max-width: 240px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 110%;
+      color: $white;
+      transition: all 250ms ease-in-out;
+
+      & span {
+        font-weight: $fontWeightBold;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: $mainBlueHover;
+      }
+    }
+  }
+}

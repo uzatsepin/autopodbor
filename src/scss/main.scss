@@ -1,0 +1,17 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "./vendor/reset";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/check";
+@import "./components/why";
+@import "./components/process";
+@import "./components/work";
+@import "./components/faq";
+@import "./components/price";
+@import "./components/call";
+@import "./components/phone-call";

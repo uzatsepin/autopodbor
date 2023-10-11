@@ -1,0 +1,117 @@
+.call {
+  margin-top: 60px;
+  padding-bottom: 80px;
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    transform: scale(103%);
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+
+  }
+
+  &__wrapper {
+    border-radius: 32px;
+    background-color: $mainBlue;
+    padding: 60px;
+    position: relative;
+    z-index: 2;
+    @media screen and (max-width: 815px) {
+      padding: 30px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: baseline;
+    gap: 80px;
+    @media screen and (max-width: 815px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media screen and (max-width: 414px) {
+      gap: 40px;
+    }
+  }
+
+  &__text {
+    max-width: 490px;
+
+    &-title {
+      font-size: 40px;
+      font-weight: $fontWeightBold;
+      line-height: 110%;
+      color: $white;
+      @media screen and (max-width: 810px) {
+        text-align: center;
+      }
+    }
+
+    &-descr {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 140%;
+      color: $white;
+      margin-top: 50px;
+      @media screen and (max-width: 810px) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @media screen and (max-width: 810px) {
+      width: 100%;
+    }
+
+    &-name, &-phone, &-price {
+      padding: 24px;
+      background: $white;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 110%;
+      color: $black;
+      border-radius: 16px;
+      box-shadow: $defaultShadow;
+      width: 420px;
+      z-index: 3;
+      @media screen and (max-width: 815px) {
+        width: 100%;
+      }
+    }
+
+    &-btn {
+      border-radius: 16px;
+      background: $white;
+      box-shadow: $defaultShadow;
+      padding: 20px 48px;
+      font-size: 18px;
+      font-weight: $fontWeightBold;
+      line-height: 120%;
+      color: $black;
+      max-width: 245px;
+      border: 1px solid transparent;
+      transition: all 250ms ease-in-out;
+      z-index: 3;
+      @media screen and (max-width: 510px) {
+        max-width: 100%;
+      }
+
+      &:hover {
+        border: 1px solid $gray;
+      }
+
+      &:active {
+        transform: scale(95%);
+      }
+    }
+  }
+}
