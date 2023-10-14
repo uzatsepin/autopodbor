@@ -23,8 +23,11 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: $white;
-  background: $backgroundBlack;
+  background-image: url('../img/body-bg.jpg');
   box-sizing: border-box;
+  background-repeat-x: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(0);
 }
 
 [class*="__container"] {
