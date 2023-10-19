@@ -103,19 +103,21 @@
     }
 
     &-phone {
-      border-radius: 16px;
-      background: rgba(44, 44, 44, 0.70);
+      border-radius: 12px;
+      background: rgba(44, 44, 44, 0.7);
       box-shadow: $defaultShadow;
       padding: 10px 16px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      column-gap: 12px;
       transition: all 250ms ease-in-out;
+      flex-wrap: wrap;
+      max-width: 193px;
       @media screen and (max-width: 414px) {
         padding: 8px 12px;
         font-size: 14px;
         border-radius: 8px;
-
+        max-width: 145px;
       }
 
       &:before {
@@ -135,7 +137,16 @@
       }
 
       &:hover {
-        background: rgba(95, 95, 95, 0.70);
+        background: rgba(95, 95, 95, 0.7);
+        & span {
+          color: #fff;
+        }
+      }
+      & span {
+        font-size: 14px;
+        color: #9f9f9f;
+        transition: all 250ms ease-in-out;
+        margin: 0 auto;
       }
     }
 
@@ -148,7 +159,7 @@
       & span {
         display: block;
         margin-top: 4px;
-        color: #9F9F9F;
+        color: #9f9f9f;
         @media screen and (max-width: 414px) {
           margin-top: 0;
         }
@@ -161,7 +172,7 @@
     font-weight: 400;
     line-height: 110%;
     max-width: 420px;
-    font-family: 'Play', sans-serif;
+    font-family: "Play", sans-serif;
     @media screen and (max-width: 414px) {
       font-size: 20px;
       text-align: center;
@@ -179,7 +190,6 @@
   }
 
   &__btn {
-
     &.btn-primary {
       display: flex;
       align-items: center;
@@ -260,7 +270,6 @@
     &:nth-of-type(2) {
       margin: 0.5rem 0;
     }
-
   }
 
   .mobile-nav-button__line--1 {
@@ -302,24 +311,27 @@
   opacity: 0;
 
   &__phone {
-    color: #FFF;
+    color: #fff;
     font-size: 16px;
     font-weight: 500;
     line-height: 140%;
     display: flex;
     align-items: center;
-    gap: 13px;
+    column-gap: 13px;
     justify-content: center;
     margin-bottom: 24px;
+    flex-wrap: wrap;
+    max-width: 170px;
+    margin: 12px auto 12px;
 
     &:before {
       content: "";
       display: flex;
       width: 12px;
-      height: 21px;
+      height: 19px;
       align-items: center;
       gap: 13px;
-      background-image: url('../img/phone-icon.svg');
+      background-image: url("../img/phone-icon.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -344,10 +356,13 @@
 
       &.logo {
         margin-top: 70px;
+        &::after {
+          background: $mainBlue;
+        }
       }
 
       &:after {
-        content: '';
+        content: "";
         background: $black;
         width: 100%;
         height: 100%;

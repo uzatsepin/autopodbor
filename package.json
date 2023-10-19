@@ -1,7 +1,7 @@
 {
-  "name": "gulp-builder",
-  "version": "2.0.4",
-  "description": "gulp-builder for weblayout",
+  "name": "podborcar01",
+  "version": "0.1.15",
+  "description": "podborcard01 freenalce",
   "main": "gulpfile.js",
   "scripts": {
     "html": "node-w3c-validator -f lint -evH -i app/**/*.html",
@@ -12,7 +12,7 @@
     "zip": "gulp zip",
     "code": "editorconfig-checker"
   },
-  "author": "MaxGraph",
+  "author": "andr",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.7",
